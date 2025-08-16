@@ -1,0 +1,4 @@
+bin/
+obj/
+*.sln
+*.postman_collection.json
