@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "70e3264d-2a06-495c-bf48-2a8942828b8f",
+		"name": "StorySpoiler API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37731376"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userName\": \"DenisTestUser\",\n  \"firstName\": \"Denis\",\n  \"midName\": \"\",\n  \"lastName\": \"Test\",\n  \"email\": \"DenisTestUser123@exam.bg\",\n  \"password\": \"DenisTestUser123\",\n  \"rePassword\": \"DenisTestUser123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://d3s5nxhwblsjbi.cloudfront.net/api/User/Create",
+					"protocol": "https",
+					"host": [
+						"d3s5nxhwblsjbi",
+						"cloudfront",
+						"net"
+					],
+					"path": [
+						"api",
+						"User",
+						"Create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userName\": \"DenisTestUser\",\n  \"password\": \"DenisTestUser123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://d3s5nxhwblsjbi.cloudfront.net/api/User/Authentication",
+					"protocol": "https",
+					"host": [
+						"d3s5nxhwblsjbi",
+						"cloudfront",
+						"net"
+					],
+					"path": [
+						"api",
+						"User",
+						"Authentication"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

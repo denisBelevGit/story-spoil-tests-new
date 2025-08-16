@@ -1,0 +1,25 @@
+name: StorySpoiler CI
+on:
+  push:
+    branches: [ "main" ]
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    env:
+      TEST_USER_NAME: "DenisTestUser"
+      TEST_USER_PASSWORD: "DenisTestUser123"
+      BASE_URL: "https://d3s5nxhwblsjbi.cloudfront.net"
+      
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    - name: Setup .NET SDK
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.x
+    - name: Restore dependencies
+      run: dotnet restore ./StorySpoilerTests.csproj
+    - name: Build
+      run: dotnet build ./StorySpoilerTests.csproj --configuration Release --no-restore
+    - name: Test
+      run: dotnet test ./StorySpoilerTests.csproj --configuration Release --no-build --verbosity normal
