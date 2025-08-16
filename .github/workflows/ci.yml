@@ -9,14 +9,13 @@ jobs:
       TEST_USER_NAME: "DenisTestUser"
       TEST_USER_PASSWORD: "DenisTestUser123"
       BASE_URL: "https://d3s5nxhwblsjbi.cloudfront.net"
-      
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
     - name: Setup .NET SDK
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: 8.x
+        dotnet-version: 9.x
     - name: Restore dependencies
       run: dotnet restore ./StorySpoilerTests.csproj
     - name: Build
