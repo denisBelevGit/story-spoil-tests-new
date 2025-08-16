@@ -2,3 +2,4 @@ bin/
 obj/
 *.sln
 *.postman_collection.json
+.DS_Store
